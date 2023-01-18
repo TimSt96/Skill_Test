@@ -33,7 +33,7 @@ public class SkillHomePage extends BasePage { //наследуемся от су
         return this;
     }
     //тест 1
-    public SkillHomePage enterParamIncorrectName() { //метод для реализ логики, методы будет возвращать тип данных соотв текущему классу, т.о. мы в дальнейш в тестовых класса сможем вызывать методы просто через точку (ДОПОЛН ПРИМЕРОМ)
+    public SkillHomePage enterParamIncorrectName() {
         driver.findElement(enter_name).sendKeys(nameIncorrect);
         return this;
     }

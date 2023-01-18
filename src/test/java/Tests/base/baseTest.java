@@ -7,10 +7,10 @@ import Common.CommonActions;
 import org.junit.After;
 import org.openqa.selenium.WebDriver;
 
-public class baseTest { //тут будут общие параметры и методы для всех тестовых классов и все тестовые классы будут наследоваться от этого BaseTest класса
-    protected WebDriver driver = CommonActions.createDriver(); //модификатор protected - для того чтобы его прокидывать в другие классы. Обращаемся к методу createdriver класса CommonActions
-    protected BasePage basePage = new BasePage(driver); //создаем экземпляр класса наших страниц
-    protected SkillHomePage skillHomePage = new SkillHomePage(driver);//созд домашнюю страницу.
+public class baseTest {
+    protected WebDriver driver = CommonActions.createDriver();
+    protected BasePage basePage = new BasePage(driver);
+    protected SkillHomePage skillHomePage = new SkillHomePage(driver);
     protected OnlineCourses onlineCourses = new OnlineCourses(driver);
     public static final Boolean HOLD_BROWSER_OPEN = true;
 

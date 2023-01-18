@@ -11,18 +11,18 @@ import java.util.ArrayList;
 import static Constant.Constant.TimeoutVariable.EXPLICIT_WAIT;
 
 public class BasePage {
-    protected WebDriver driver; //экземпляр драйвера
+    protected WebDriver driver;
     public BasePage(WebDriver driver){
         this.driver = driver;
-    } //конструктор в который передадим webdriver и устанавливаем его в текущую переменную
+    }
     public void open(String url) {
         driver.get(url);
-    } //метод для открытия страниц Open - в него будет передавать некий url и при вызове мотода Open и в него будет передвавться драйвер getUrl
-    public WebElement waitElementVisible(WebElement element){ //метод для ожидания видимости элементов
-        new WebDriverWait(driver, EXPLICIT_WAIT); //логика для обработки ожидания загрузки видимости страницы
-        return element; //возвращаем полученный элемент
-//        new WebDriverWait(driver, EXPLICIT_WAIT).until(ExpectedConditions.visibilityOf(element)); //логика для обработки ожидания загрузки видимости страницы
-//        return element; //возвращаем полученный элемент
+    }
+    public WebElement waitElementVisible(WebElement element){
+        new WebDriverWait(driver, EXPLICIT_WAIT);
+        return element;
+//        new WebDriverWait(driver, EXPLICIT_WAIT).until(ExpectedConditions.visibilityOf(element));
+//        return element;
     }
     public void switchTab(String xpathCheck) {
     String oldTab = driver.getWindowHandle();
